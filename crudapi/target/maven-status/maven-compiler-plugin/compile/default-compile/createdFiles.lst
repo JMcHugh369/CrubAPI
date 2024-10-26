@@ -1,0 +1,5 @@
+com\example\crudapi\repository\AnimalRepository.class
+com\example\crudapi\controller\AnimalController.class
+com\example\crudapi\entity\Animal.class
+com\example\crudapi\service\AnimalService.class
+com\example\crudapi\CrudapiApplication.class

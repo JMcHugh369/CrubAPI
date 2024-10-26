@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <header>
+
+  </header>
+  <body>
+    <h1 data-th-text="${animal.name}"></h1>
+    <span data-th-text="${animal.id}">
+      <h5 class="card-title" data-th-text=" 'ID: '+ ${animal.id}"></h5>
+      <p class="card-text" data-th-text=" 'Name: '+${animal.name}"></p>
+      <p class="card-text" data-th-text=" 'Scientific Name: '+${animal.scientific_name}"></p>
+      <p class="card-text" data-th-text=" 'Species: '+${animal.species}"></p>
+      <p class="card-text" data-th-text=" 'Habitat: '+${animal.habitat}"></p>
+      <p class="card-text" data-th-text=" 'Description: '+${animal.description}"></p>
+    </span>
+  </body>
+  </html>

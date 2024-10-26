@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Update Animal</title>
+</head>
+<body>
+<h1>Update Animal</h1>
+<form th:action="@{/animals/update}" th:object="${animal}" method="post">
+  <input type="hidden" th:field="*{id}" />
+  <label for="name">Name:</label>
+  <input type="text" id="name" th:field="*{name}" />
+  <label for="description">Description:</label>
+  <input type="text" id="description" th:field="*{description}" />
+  <label for="habitat">Habitat:</label>
+  <input type="text" id="habitat" th:field="*{habitat}" />
+  <label for="scientificName">Scientific Name:</label>
+  <input type="text" id="scientificName" th:field="*{scientificName}" />
+  <label for="species">Species:</label>
+  <input type="text" id="species" th:field="*{species}" />
+  <button type="submit">Update</button>
+</form>
+<a href="/animals">Cancel</a>
+</body>
+</html>

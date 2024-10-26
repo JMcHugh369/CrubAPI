@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Animal List</title>
+</head>
+<body>
+<span th:text="${animal.id}">
+<tr data-th-each="animal : ${AnimalList}">
+    <td><a data-th-href="@{/animals/{id}(id=${animal.id})}"
+           data-th-text="${animal.id}"></a></td>
+    <td data-th-text="${animal.name}"></td>
+    <td data-th-text="${animal.scientific_name}"></td>
+    <td data-th-text="${animal.species}"></td>
+    <td data-th-text="${animal.habitat}"></td>
+    <td data-th-text="${animal.description}"></td>
+</tr>
+</span>
+
+<button  class="btn btn-outline-primary" onclick="openForm()">Create New Animal</button>
+<form id="new-animal" action="/animals/new" method="post" style="display:none">
+    <p>Name: </p><input type="text" id="name" name="name" placeholder="Name"/>
+    <p>Scientific Name: </p><input type="text" id="scientific_name" name="scientific_name" placeholder="Scientific Name"/>
+    <p>Species: </p><input type="text" id="species" name="species" placeholder="Species"/>
+    <p>Habitat: </p><input type="text" id="habitat" name="habitat" placeholder="Habitat"/>
+    <p>Description: </p><input type="text" id="descripton" name="description" placeholder="Description"/>
+    <p></p>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="reset" class="btn btn-danger" onclick="closeForm()">Cancel</button>
+
+</form>
+
+<script>
+    function openForm() {
+      document.getElementById("new-animal").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("new-animal").style.display = "none";
+    }
+
+</script>
+
+</table>
+</body>
+</html>

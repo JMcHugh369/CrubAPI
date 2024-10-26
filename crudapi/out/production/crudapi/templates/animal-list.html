@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Animal List</title>
+</head>
+<body>
+<h1>Animal List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Habitat</th>
+        <th>Scientific Name</th>
+        <th>Species</th>
+        <th>Fuck dis pis of shit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="animal : ${animals}">
+        <td th:text="${animal.id}"></td>
+        <td th:text="${animal.name}"></td>
+        <td th:text="${animal.description}"></td>
+        <td th:text="${animal.habitat}"></td>
+        <td th:text="${animal.scientificName}"></td>
+        <td th:text="${animal.species}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
